@@ -2,7 +2,7 @@
   // Your Discord user ID (Discord → Settings → Advanced → Developer Mode,
   // then right-click your name → Copy User ID). You also need to join the
   // Lanyard server (discord.gg/lanyard) so your status can be shown here.
-  var DISCORD_ID = '';
+  var DISCORD_ID = '587379155457278044';
 
   var root = document.documentElement;
 
