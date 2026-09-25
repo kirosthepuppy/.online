@@ -547,6 +547,62 @@ a.card:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--ink)
   text-align: center;
 }
 .footer p { margin: 0; }
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 28px;
+  margin-top: 14px;
+}
+.footer-links a {
+  color: var(--text);
+  font: 700 16px var(--display);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+  transition: color .15s;
+}
+.footer-links a:hover { color: var(--orange); }
+
+/* ---------- Legal pages ---------- */
+.legal-updated { margin: -16px 0 0; color: var(--muted); font-size: 14px; font-weight: 600; }
+.legal {
+  max-width: 760px;
+  margin: 40px 0 0;
+  padding: 12px 36px 32px;
+  background: var(--surface);
+  border: var(--line) solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: var(--pop);
+}
+.legal h2 { margin: 32px 0 10px; font-size: 26px; }
+.legal p, .legal li { color: var(--text); font-size: 16px; }
+.legal p { margin: 0 0 14px; }
+.legal ul { margin: 0 0 14px; padding-left: 22px; }
+.legal li { margin-bottom: 8px; }
+.legal a { color: var(--orange); font-weight: 600; text-underline-offset: 3px; }
+.legal code {
+  padding: 1px 6px;
+  background: var(--bg);
+  border: 1px solid color-mix(in srgb, var(--text) 20%, transparent);
+  border-radius: 6px;
+  font-size: 14px;
+}
+.legal-table { overflow-x: auto; margin: 0 0 14px; }
+.legal table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.legal th, .legal td {
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 2px dashed color-mix(in srgb, var(--text) 18%, transparent);
+}
+.legal th {
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.legal tr:last-child td { border-bottom: 0; }
 
 /* ---------- Portfolio ---------- */
 .page-head { padding: 72px 0 16px; }
@@ -734,6 +790,9 @@ a.work .work-meta { color: var(--orange); font-size: 15px; font-weight: 800; let
 @media (max-width: 640px) {
   .nav { gap: 8px; margin: 8px 12px 0; padding: 6px 6px 6px 16px; top: 8px; }
   .nav nav a { padding: 6px 8px; font-size: 14px; }
+  .nav nav a[href="#about"],
+  .nav nav a[href="#stuff"],
+  .nav nav a[href="./"] { display: none; }
   .brand { font-size: 20px; }
   .presence { padding: 6px; border-width: 2px; }
   .presence-text { display: none; }
@@ -753,11 +812,19 @@ a.work .work-meta { color: var(--orange); font-size: 15px; font-weight: 800; let
   .contact-peek { width: 120px; height: 120px; }
   .contact-box .btn { padding: 12px 18px; font-size: 14px; }
   .footer { padding: 24px 16px 40px; }
+  .legal { padding: 4px 20px 24px; box-shadow: var(--pop-sm); }
+  .legal h2 { font-size: 22px; }
 }
 
-@media (max-width: 420px) {
-  .nav nav a[href="#about"],
-  .nav nav a[href="#stuff"] { display: none; }
+@media (max-width: 380px) {
+  .nav { gap: 4px; padding-left: 12px; }
+  .nav nav { gap: 0; }
+  .nav nav a { padding: 6px 7px; }
+  .brand { font-size: 18px; }
+}
+
+@media (max-width: 340px) {
+  .brand-paw { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

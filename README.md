@@ -13,6 +13,7 @@ Everything the site serves lives in `public/`:
 - `public/portfolio.html` — portfolio page (copy a `work` card to add a piece)
 - `public/style.css` — styles, with light and dark themes
 - `public/script.js` — theme toggle, boop counter, video player, footer year
+- `public/privacy.html`, `public/cookies.html`, `public/terms.html` — legal pages linked in the footer (update the "Last updated" date when you change them)
 - `public/404.html` — not-found page
 - `public/images/` — artwork and photos used across the page
 
