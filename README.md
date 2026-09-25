@@ -10,6 +10,7 @@ free to use,
 - `index.html` — the page (edit the About, Stuff, and Contact sections here)
 - `style.css` — styles, with light and dark themes
 - `script.js` — theme toggle, boop counter, footer year
+- `portfolio.html` — portfolio page (copy a `work` card to add a piece)
 - `404.html` — not-found page
 - `images/` — artwork and photos used across the page
 
