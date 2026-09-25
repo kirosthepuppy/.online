@@ -8,7 +8,7 @@ Source for Kiro's personal website — plain HTML, CSS, and a little JavaScript.
 - `style.css` — styles, with light and dark themes
 - `script.js` — theme toggle, boop counter, footer year
 - `404.html` — not-found page
-- `images/` — artwork of Kiro used in the hero, gallery, and contact sections
+- `images/` — artwork of Kiro used in the hero and contact sections
 
 ## Preview locally
 

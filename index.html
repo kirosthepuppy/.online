@@ -31,7 +31,6 @@
     </a>
     <nav aria-label="Primary">
       <a href="#about">About</a>
-      <a href="#art">Art</a>
       <a href="#stuff">Stuff</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -45,16 +44,16 @@
     <section class="hero" id="top">
       <div class="hero-text">
         <p class="eyebrow"><span>hi, hello, awoo</span></p>
-        <h1>I'm <span class="name">Kiro</span><span class="bang">!</span><br>good pup, big grin.</h1>
-        <p class="lede">A pup who likes building things, breaking things, and occasionally fixing them again. This is where I keep my projects, my art, and whatever else I feel like sharing.</p>
+        <h1>I'm <span class="name">Kiro</span><span class="bang">!</span></h1>
+        <p class="lede">A pup who likes building things, breaking things, and occasionally fixing them again. This is where I keep my projects and whatever else I feel like sharing.</p>
         <div class="cta">
-          <a class="btn btn-primary" href="#art">See the art</a>
+          <a class="btn btn-primary" href="#stuff">See what I'm up to</a>
           <a class="btn" href="#contact">Say hi</a>
         </div>
         <button class="boop" type="button" aria-live="polite">
           <span class="boop-nose" aria-hidden="true">👃</span>
-          <span class="boop-label">boop the snoot</span>
-          <span class="boop-count" data-count>0 boops</span>
+          <span class="boop-label">boops for kiro :3</span>
+          <span class="boop-count" data-count>0</span>
         </button>
       </div>
 
@@ -72,43 +71,23 @@
       </div>
     </section>
 
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>AWOO ✦ BOOP ✦ GOOD PUP ✦ WAG WAG ✦ AWOO ✦ BOOP ✦ GOOD PUP ✦ WAG WAG ✦&nbsp;</span>
-        <span>AWOO ✦ BOOP ✦ GOOD PUP ✦ WAG WAG ✦ AWOO ✦ BOOP ✦ GOOD PUP ✦ WAG WAG ✦&nbsp;</span>
-      </div>
-    </div>
 
     <section id="about" class="section">
-      <h2><span class="h-mark">About</span></h2>
+      <h2>About</h2>
       <div class="about-grid">
-        <p>I'm Kiro. I tinker with code, poke at cloud stuff, and generally follow whatever rabbit hole looks most interesting that week. I like open source, good documentation, and snacks.</p>
+        <p>I'm Kiro. I tinker with code, poke at cloud stuff, and generally follow whatever rabbit hole looks most interesting that week. I like open source and snacks, and I love video editing.</p>
         <ul class="facts">
           <li><span>Currently</span> building this website</li>
-          <li><span>Likes</span> open source, cozy games, long walks</li>
-          <li><span>Dislikes</span> baths, flaky tests</li>
-          <li><span>Based</span> somewhere online</li>
+          <li><span>Likes</span> open source, video editing, photography, gaming, long walks</li>
+          <li><span>Hates</span> tests, school, work</li>
+          <li><span>Based</span> in TX</li>
         </ul>
       </div>
     </section>
 
-    <section id="art" class="section">
-      <h2><span class="h-mark">Art</span></h2>
-      <p class="section-sub">Portraits of yours truly. Click one for a closer look.</p>
-      <div class="gallery">
-        <button class="art-card art-mint" type="button" data-full="images/kiro-grin.jpg" data-alt="Illustration of Kiro, a golden dog with bushy eyebrows, grinning at the viewer while tugging up a black shirt.">
-          <img src="images/kiro-grin.jpg" alt="Illustration of Kiro, a golden dog with bushy eyebrows, grinning at the viewer while tugging up a black shirt." width="849" height="814" loading="lazy">
-          <span class="art-label">the grin</span>
-        </button>
-        <button class="art-card art-sky" type="button" data-full="images/kiro-sky.jpg" data-alt="Illustration of Kiro, sweaty in the sun, holding a dark bottle against a bright blue sky.">
-          <img src="images/kiro-sky.jpg" alt="Illustration of Kiro, sweaty in the sun, holding a dark bottle against a bright blue sky." width="1447" height="1020" loading="lazy">
-          <span class="art-label">hot day</span>
-        </button>
-      </div>
-    </section>
 
     <section id="stuff" class="section">
-      <h2><span class="h-mark">Stuff</span></h2>
+      <h2>Stuff</h2>
       <div class="cards">
         <a class="card c-orange" href="https://github.com/kirosthepuppy/.online">
           <span class="card-tag">Project</span>
@@ -122,10 +101,10 @@
           <p>Where my experiments, half-finished ideas, and occasional finished ones live.</p>
           <span class="card-link">@kirosthepuppy →</span>
         </a>
-        <div class="card c-mint card-soon">
-          <span class="card-tag">Coming soon</span>
-          <h3>Something new</h3>
-          <p>There's always another project brewing. Check back later to see what it turned into.</p>
+        <div class="card c-mint">
+          <span class="card-tag">In progress</span>
+          <h3>Prism shaders</h3>
+          <p>Developing Prism shaders for macOS. More on this soon.</p>
         </div>
       </div>
     </section>
@@ -136,7 +115,7 @@
         <div>
           <h2>Wanna chat?</h2>
           <p>Collabs, questions, or just a friendly bark. My inbox is open.</p>
-          <a class="btn btn-primary" href="mailto:admin@kirothepup.online">admin@kirothepup.online</a>
+          <a class="btn btn-primary" href="mailto:contact@kirothepup.online">contact@kirothepup.online</a>
         </div>
       </div>
     </section>
@@ -146,10 +125,6 @@
     <p>© <span data-year>2026</span> Kiro · made with 🐾 · <a href="https://github.com/kirosthepuppy/.online">source</a></p>
   </footer>
 
-  <dialog class="lightbox" aria-label="Artwork">
-    <form method="dialog"><button class="lightbox-close" aria-label="Close">✕</button></form>
-    <img src="" alt="">
-  </dialog>
 
   <script src="script.js"></script>
 </body>

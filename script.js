@@ -26,7 +26,7 @@
   var count = parseInt(store('boops'), 10) || 0;
 
   function render() {
-    countEl.textContent = count + (count === 1 ? ' boop' : ' boops');
+    countEl.textContent = count;
   }
   render();
 
@@ -43,19 +43,3 @@
   document.querySelector('[data-year]').textContent = new Date().getFullYear();
 })();
 
-// Art lightbox
-(function () {
-  var box = document.querySelector('.lightbox');
-  if (!box || typeof box.showModal !== 'function') return;
-  var img = box.querySelector('img');
-  document.querySelectorAll('.art-card').forEach(function (card) {
-    card.addEventListener('click', function () {
-      img.src = card.dataset.full;
-      img.alt = card.dataset.alt;
-      box.showModal();
-    });
-  });
-  box.addEventListener('click', function (e) {
-    if (e.target === box) box.close();
-  });
-})();
