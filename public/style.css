@@ -94,7 +94,6 @@ img { display: block; max-width: 100%; height: auto; }
   box-shadow: var(--pop-sm);
 }
 .brand {
-  margin-right: auto;
   font: 800 24px var(--display);
   text-decoration: none;
   letter-spacing: -0.02em;
@@ -102,7 +101,37 @@ img { display: block; max-width: 100%; height: auto; }
 }
 .brand-paw { display: inline-block; transition: transform .3s; }
 .brand:hover .brand-paw { transform: rotate(-25deg) scale(1.2); }
-.nav nav { display: flex; gap: 4px; }
+.presence {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  max-width: 280px;
+  padding: 5px 12px 5px 9px;
+  background: var(--bg);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform .12s;
+}
+.presence[hidden] { display: none; }
+.presence:hover { transform: translateY(-1px) rotate(-1deg); }
+.presence-text { overflow: hidden; text-overflow: ellipsis; }
+.presence-dot {
+  flex: none;
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: #80848e;
+}
+.presence[data-status="online"] .presence-dot { background: #23a55a; animation: pulse 2s ease-in-out infinite; }
+.presence[data-status="idle"] .presence-dot { background: #f0b232; }
+.presence[data-status="dnd"] .presence-dot { background: #f23f43; }
+.nav nav { display: flex; gap: 4px; margin-left: auto; }
 .nav nav a {
   padding: 6px 12px;
   border-radius: 999px;
@@ -463,6 +492,16 @@ a.card:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--ink)
 .contact-box h2 { margin: 0 0 8px; }
 .contact-box p { margin: 0 0 24px; font-size: 18px; max-width: 480px; }
 .contact-box .btn { background: var(--surface); color: var(--text); }
+.contact-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.contact-box .btn-discord {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #5865f2;
+  color: #fff;
+}
+.btn-discord[hidden] { display: none; }
+.btn-discord svg { width: 20px; height: 20px; fill: currentColor; }
 .socials {
   display: flex;
   flex-wrap: wrap;
@@ -674,6 +713,10 @@ a.work .work-meta { color: var(--orange); font-size: 15px; font-weight: 800; let
   0%, 100% { border-radius: 58% 42% 55% 45% / 45% 55% 45% 55%; }
   50% { border-radius: 42% 58% 45% 55% / 55% 45% 55% 45%; }
 }
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(35, 165, 90, .5); }
+  50% { box-shadow: 0 0 0 4px rgba(35, 165, 90, 0); }
+}
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes bob {
   0%, 100% { translate: 0 0; }
@@ -692,6 +735,8 @@ a.work .work-meta { color: var(--orange); font-size: 15px; font-weight: 800; let
   .nav { gap: 8px; margin: 8px 12px 0; padding: 6px 6px 6px 16px; top: 8px; }
   .nav nav a { padding: 6px 8px; font-size: 14px; }
   .brand { font-size: 20px; }
+  .presence { padding: 6px; border-width: 2px; }
+  .presence-text { display: none; }
   .theme-toggle { width: 38px; height: 38px; }
   main { padding: 0 16px; }
   .lede { font-size: 17px; }
