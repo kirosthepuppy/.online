@@ -416,6 +416,30 @@ a.card:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--ink)
 .contact-box h2 { margin: 0 0 8px; }
 .contact-box p { margin: 0 0 24px; font-size: 18px; max-width: 480px; }
 .contact-box .btn { background: var(--surface); color: var(--text); }
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px 8px 12px;
+  background: var(--ink);
+  color: #fff4e0;
+  border: var(--line) solid var(--ink);
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: transform .12s, background .12s, color .12s;
+}
+.socials a:hover { transform: translateY(-2px) rotate(-2deg); background: var(--yellow); color: var(--on-accent); }
+.socials svg { width: 18px; height: 18px; fill: currentColor; }
 .contact-peek {
   width: 180px;
   height: 180px;
@@ -493,6 +517,7 @@ a.card:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--ink)
   .sticker-bubble { font-size: 18px; right: 0; }
   .contact-box { grid-template-columns: 1fr; padding: 28px 22px; gap: 20px; box-shadow: 6px 6px 0 var(--ink); }
   .contact-peek { width: 120px; height: 120px; }
+  .contact-box .btn { padding: 12px 18px; font-size: 14px; }
   .footer { padding: 24px 16px 40px; }
 }
 
