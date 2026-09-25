@@ -2,6 +2,9 @@
 
 Source for Kiro's personal website — plain HTML, CSS, and a little JavaScript. No build step.
 
+free to use, 
+
+
 ## Files
 
 - `index.html` — the page (edit the About, Stuff, and Contact sections here)
