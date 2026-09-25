@@ -586,6 +586,62 @@ a.work:hover .thumb-icon svg { transform: scale(1.15) rotate(-8deg); }
 .work p { margin: 0 0 16px; color: var(--muted); font-size: 15px; flex: 1; }
 .work-meta { color: var(--muted); font-size: 13px; font-weight: 700; letter-spacing: .02em; }
 a.work .work-meta { color: var(--orange); font-size: 15px; font-weight: 800; letter-spacing: 0; }
+.reels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin: 0 0 36px;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 900px) { .reels { grid-template-columns: repeat(6, 1fr); } }
+.reel {
+  position: relative;
+  display: block;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  background: var(--ink);
+  border: var(--line) solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: var(--pop);
+  color: #fff4e0;
+  text-decoration: none;
+  transition: transform .15s, box-shadow .15s;
+}
+.reels li:nth-child(odd) .reel { transform: rotate(-1.5deg); }
+.reels li:nth-child(even) .reel { transform: rotate(1.5deg); }
+.reels li .reel:hover { transform: translate(-3px, -3px) rotate(0); box-shadow: 9px 9px 0 var(--ink); }
+.reel img { width: 100%; height: 100%; object-fit: cover; }
+.reel iframe { width: 100%; height: 100%; border: 0; }
+.reel-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  translate: -50% -50%;
+  background: var(--orange);
+  color: var(--on-accent);
+  border: var(--line) solid var(--ink);
+  border-radius: 50%;
+  box-shadow: var(--pop-sm);
+  transition: transform .3s cubic-bezier(.3, 1.6, .5, 1);
+}
+.reel:hover .reel-play { transform: scale(1.15); }
+.reel-play svg { width: 24px; height: 24px; margin-left: 3px; fill: currentColor; }
+.reel-title {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 36px 12px 12px;
+  background: linear-gradient(transparent, rgba(10, 9, 22, .85));
+  font: 800 15px/1.2 var(--display);
+}
+.reel.playing { transform: none !important; }
+.reel.playing .reel-play,
+.reel.playing .reel-title { display: none; }
+
 .work-soon { border-style: dashed; box-shadow: none; background: transparent; }
 .work-soon .card-tag { background: var(--surface); }
 
@@ -644,6 +700,8 @@ a.work .work-meta { color: var(--orange); font-size: 15px; font-weight: 800; let
   .section { padding-top: 64px; }
   .page-head { padding-top: 48px; }
   .works { grid-template-columns: 1fr; }
+  .reels { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .reel-title { font-size: 13px; }
   .sticker-star { width: 50px; height: 50px; font-size: 24px; }
   .sticker-bubble { font-size: 18px; right: 0; }
   .contact-box { grid-template-columns: 1fr; padding: 28px 22px; gap: 20px; box-shadow: 6px 6px 0 var(--ink); }

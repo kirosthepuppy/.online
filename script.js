@@ -41,6 +41,22 @@
     });
   }
 
+  // Video reels: swap the thumbnail for the player on click
+  document.querySelectorAll('.reel[data-video]').forEach(function (reel) {
+    reel.addEventListener('click', function (e) {
+      if (reel.classList.contains('playing')) return;
+      e.preventDefault();
+      var frame = document.createElement('iframe');
+      frame.src = 'https://www.youtube-nocookie.com/embed/' + reel.dataset.video + '?autoplay=1&playsinline=1';
+      frame.title = reel.querySelector('.reel-title').textContent;
+      frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      frame.allowFullscreen = true;
+      reel.replaceChildren(frame);
+      reel.classList.add('playing');
+      reel.removeAttribute('href');
+    });
+  });
+
   // Footer year
   var year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
