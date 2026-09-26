@@ -20,6 +20,11 @@
       var t = localStorage.getItem('theme');
       if (t) document.documentElement.dataset.theme = t;
     } catch (e) {}
+    try {
+      if (localStorage.getItem('age-ok') !== '1') document.documentElement.classList.add('gated');
+    } catch (e) {
+      document.documentElement.classList.add('gated');
+    }
   </script>
 </head>
 <body>

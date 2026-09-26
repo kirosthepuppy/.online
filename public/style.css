@@ -230,6 +230,7 @@ h1 {
   border: var(--line) solid var(--ink);
   border-radius: 999px;
   box-shadow: var(--pop-sm);
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   text-decoration: none;
@@ -753,7 +754,66 @@ a.work .work-meta { color: var(--orange); font-size: 15px; font-weight: 800; let
   box-shadow: var(--pop);
 }
 
+/* ---------- Age check ---------- */
+.gated body { overflow: hidden; }
+.gated body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--bg) 55%, transparent);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+.age-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  overflow-y: auto;
+}
+.age-card {
+  position: relative;
+  width: min(460px, 100%);
+  padding: 44px 32px 28px;
+  background: var(--surface);
+  border: var(--line) solid var(--ink);
+  border-radius: 28px;
+  box-shadow: 10px 10px 0 var(--ink);
+  text-align: center;
+  animation: pop-in .35s cubic-bezier(.3, 1.6, .5, 1);
+}
+.age-badge {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  translate: -50% 0;
+  background: var(--pink);
+  color: var(--on-accent);
+  border: var(--line) solid var(--ink);
+  border-radius: 50%;
+  box-shadow: var(--pop-sm);
+  font: 800 22px var(--display);
+  rotate: -8deg;
+}
+.age-card h2 { margin: 6px 0 10px; font-size: 38px; }
+.age-card p { margin: 0 0 22px; color: var(--muted); }
+.age-card p strong { color: var(--text); }
+.age-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.age-fine { margin: 20px 0 0 !important; font-size: 13px; }
+.age-fine a { color: var(--orange); font-weight: 700; }
+
 /* ---------- Animations ---------- */
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(.9) rotate(-2deg); }
+  to { opacity: 1; transform: none; }
+}
 @keyframes boop {
   0% { transform: scale(1); }
   40% { transform: scale(.75) rotate(-10deg); }
@@ -812,6 +872,8 @@ a.work .work-meta { color: var(--orange); font-size: 15px; font-weight: 800; let
   .contact-peek { width: 120px; height: 120px; }
   .contact-box .btn { padding: 12px 18px; font-size: 14px; }
   .footer { padding: 24px 16px 40px; }
+  .age-card { padding: 40px 20px 24px; box-shadow: 6px 6px 0 var(--ink); }
+  .age-card h2 { font-size: 30px; }
   .legal { padding: 4px 20px 24px; box-shadow: var(--pop-sm); }
   .legal h2 { font-size: 22px; }
 }
