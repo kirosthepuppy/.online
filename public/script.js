@@ -15,6 +15,38 @@
     }
   }
 
+  // 18+ age check (shown until the visitor confirms once)
+  if (root.classList.contains('gated')) {
+    var gate = document.createElement('div');
+    gate.className = 'age-gate';
+    gate.setAttribute('role', 'dialog');
+    gate.setAttribute('aria-modal', 'true');
+    gate.setAttribute('aria-labelledby', 'age-title');
+    gate.setAttribute('aria-describedby', 'age-desc');
+    gate.innerHTML =
+      '<div class="age-card">' +
+        '<span class="age-badge" aria-hidden="true">18+</span>' +
+        '<h2 id="age-title">Hold up, pup!</h2>' +
+        '<p id="age-desc">This site has furry art and content meant for adults. You need to be <strong>18 or older</strong> to come in.</p>' +
+        '<div class="age-actions">' +
+          '<button class="btn btn-primary" type="button" data-age-yes>I\'m 18+, let me in</button>' +
+          '<a class="btn" href="https://www.google.com/" data-age-no>Leave</a>' +
+        '</div>' +
+        '<p class="age-fine">By entering, you agree to the <a href="terms.html">terms</a>.</p>' +
+      '</div>';
+    var hidden = [].slice.call(document.body.children);
+    hidden.forEach(function (el) { el.inert = true; });
+    document.body.appendChild(gate);
+    var yes = gate.querySelector('[data-age-yes]');
+    yes.focus();
+    yes.addEventListener('click', function () {
+      store('age-ok', '1');
+      root.classList.remove('gated');
+      hidden.forEach(function (el) { el.inert = false; });
+      gate.remove();
+    });
+  }
+
   // Theme toggle
   var toggle = document.querySelector('.theme-toggle');
   toggle.addEventListener('click', function () {

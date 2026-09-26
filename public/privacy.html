@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy · Kiro the Pup</title>
+  <meta name="description" content="How kirothepup.online handles your data. Short version: it barely touches it.">
+  <meta property="og:title" content="Privacy · Kiro the Pup">
+  <meta property="og:description" content="How kirothepup.online handles your data. Short version: it barely touches it.">
+  <meta property="og:image" content="images/kiro-sky.jpg">
+  <meta name="theme-color" content="#fff4e0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#15132a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <a class="brand" href="./" aria-label="Home">
+      <span class="brand-paw" aria-hidden="true">🐾</span> kiro
+    </a>
+    <a class="presence" data-presence hidden target="_blank" rel="noopener">
+      <span class="presence-dot" aria-hidden="true"></span>
+      <span class="presence-text">offline</span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="./">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="./#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <p class="eyebrow"><span>the boring stuff</span></p>
+      <h1>Privacy <span class="name">policy</span></h1>
+      <p class="lede">Short version: I don't collect your personal info. No analytics, no ads, no accounts, no cookies.</p>
+      <p class="legal-updated">Last updated September 25, 2026</p>
+    </section>
+
+    <article class="legal">
+      <h2>What this site stores</h2>
+      <p>Nothing on my end. A few small things are saved in <strong>your own browser</strong> so the site remembers them next time:</p>
+      <ul>
+        <li><strong>Your theme</strong> (light or dark), if you use the toggle.</li>
+        <li><strong>Your boop count</strong>, if you boop.</li>
+        <li><strong>That you confirmed you're 18+</strong>, so the age check only shows once. I don't collect your age or birthday. It's just a yes.</li>
+      </ul>
+      <p>These never leave your device and I can't see them. Clearing your browser's site data removes them. See the <a href="cookies.html">cookie policy</a> for details.</p>
+
+      <h2>Services your browser talks to</h2>
+      <p>The site is plain HTML, but a few parts load from other services. When they do, those services receive the usual technical info any website gets, like your IP address and browser type.</p>
+      <ul>
+        <li><strong>Cloudflare</strong> hosts the site and delivers every page. It processes requests to keep the site fast and protected. <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener" target="_blank">Cloudflare's privacy policy</a></li>
+        <li><strong>Google Fonts</strong> serves the fonts. <a href="https://developers.google.com/fonts/faq/privacy" rel="noopener" target="_blank">Google Fonts privacy FAQ</a></li>
+        <li><strong>Lanyard</strong> (api.lanyard.rest) provides my Discord status in the menu bar. Your browser asks it for <em>my</em> status; nothing about you is sent beyond the request itself. <a href="https://github.com/Phineas/lanyard" rel="noopener" target="_blank">About Lanyard</a></li>
+        <li><strong>YouTube</strong> provides the video thumbnails on the portfolio page. Videos only load when you click one, using YouTube's privacy-enhanced mode (youtube-nocookie.com). Once a video plays, <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google's privacy policy</a> applies.</li>
+      </ul>
+
+      <h2>If you contact me</h2>
+      <p>If you email me or message me on Discord, I'll see whatever you send, like your name, email address, or username. I only use it to talk with you. I don't sell it, share it, or add you to any mailing list.</p>
+
+      <h2>Links to other sites</h2>
+      <p>Links to TikTok, YouTube, GitHub, Discord and other sites take you somewhere with its own privacy policy. I'm not responsible for what they do.</p>
+
+      <h2>Changes</h2>
+      <p>If this changes, I'll update this page and the date at the top.</p>
+
+      <h2>Questions</h2>
+      <p>Email <a href="mailto:contact@kirothepup.online">contact@kirothepup.online</a>.</p>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <p>© <span data-year>2026</span> Kiro · made with 🐾 · <a href="https://github.com/kirosthepuppy/.online">source</a></p>
+    <nav class="footer-links" aria-label="Legal">
+      <a href="privacy.html">privacy</a>
+      <a href="cookies.html">cookies</a>
+      <a href="terms.html">terms</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
